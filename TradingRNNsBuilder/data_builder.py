@@ -3,7 +3,7 @@ import ta
 from sklearn.preprocessing import MinMaxScaler
 
 OPEN_COLUMN = 1
-HIGHT_COLUMN = 2
+HIGH_COLUMN = 2
 LOW_COLUMN = 3
 CLOSE_COLUMN = 4
 VOLUME_COLUMN = 5
@@ -42,8 +42,8 @@ class DataBuilder:
             return OPEN_COLUMN
         if(column == 'close'):
             return CLOSE_COLUMN
-        if(column == 'hight'):
-            return HIGHT_COLUMN
+        if(column == 'high'):
+            return HIGH_COLUMN
         if(column == 'low'):
             return LOW_COLUMN
     
@@ -88,8 +88,8 @@ class DataBuilder:
         if(column_name == 'open'):
             return self.data_set.iloc[row_from:row_to, OPEN_COLUMN:OPEN_COLUMN+1]
         
-        if(column_name == 'hight'):
-            return self.data_set.iloc[row_from:row_to, HIGHT_COLUMN:HIGHT_COLUMN+1]
+        if(column_name == 'high'):
+            return self.data_set.iloc[row_from:row_to, HIGH_COLUMN:HIGH_COLUMN+1]
         
         if(column_name == 'low'):
             return self.data_set.iloc[row_from:row_to, LOW_COLUMN:LOW_COLUMN+1]
